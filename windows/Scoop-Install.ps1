@@ -4,6 +4,7 @@ scoop bucket add extras
 scoop install firefox
 scoop install windows-terminal
 scoop install vscode
+scoop install toggl
 
 scoop list
 

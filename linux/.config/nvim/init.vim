@@ -8,8 +8,6 @@ Plug 'Mofiqul/dracula.nvim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'arcticicestudio/nord-vim'
 Plug 'pprovost/vim-ps1'
-Plug 'preservim/nerdtree'
-Plug 'pineapplegiant/spaceduck'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -22,21 +20,62 @@ set ignorecase
 set number
 set expandtab
 set shiftwidth=2
+"
+"   NORWEGIAN KEYBOARD MODS
+"
 
+"NORMAL
+"nnoremap ø (
+"nnoremap æ )
+"nnoremap Ø {
+"nnoremap Æ }
+"nnoremap å 0
+"nnoremap Å $
 "
-" NERDTree config" 
+"nnoremap <A-æ> æ
+"nnoremap <A-ø> ø
+"nnoremap <A-Æ> Æ
+"nnoremap <A-Ø> Ø
 "
-
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-" Mappings for NERDTree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
+""VISUAL
+"vnoremap ø (
+"vnoremap æ )
+"vnoremap Ø {
+"vnoremap Æ }
+"vnoremap å \
+"vnoremap Å `
 "
-" End NERDTree config 
+"vnoremap <A-æ> æ
+"vnoremap <A-ø> ø
+"vnoremap <A-Æ> Æ
+"vnoremap <A-Ø> Ø
 "
+""REPLACE
+"lnoremap ø (
+"lnoremap æ )
+"lnoremap Ø {
+"lnoremap Æ }
+"lnoremap å \
+"lnoremap Å `
+"
+""INSERT
+"inoremap ø (
+"inoremap æ )
+"inoremap Ø {
+"inoremap Æ }
+"inoremap <A-æ> ]
+"inoremap <A-ø> [
+"inoremap å \
+"inoremap Å `
+"
+"inoremap <A-e> æ
+"inoremap <A-o> ø
+"inoremap <A-E> Æ
+"inoremap <A-O> Ø
+"inoremap <A-a> å
+"inoremap <A-A> Å
+"
+"inoremap <C-æ> æ
+"inoremap <C-ø> ø
+"inoremap <C-Æ> Æ
+"inoremap <C-Ø> Ø

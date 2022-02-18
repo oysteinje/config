@@ -16,12 +16,16 @@ sudo apt-get install -y tmux neovim fish powershell
 # Install Azure CLI 
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
+# Install bicep 
+az bicep install
+
 # Test installations
 tmux -V
 fish -v
 nvim -v
 az version
 pwsh -v
+az bicep version
 
 ssh-keygen -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub
@@ -30,3 +34,7 @@ read  -n 1 -p "Add the public ssh key to Github and press an input when it's don
 
 mkdir -p repos/qbits/config
 git clone git@github.com:oysteinje/config.git repos/qbits/config
+
+# Install vimplug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
